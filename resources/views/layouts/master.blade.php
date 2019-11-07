@@ -17,7 +17,7 @@
  
 </head>
 
-<body id="app">
+<body>
 
       <!--Navbar-->
       @include('perfumeria.partials.nav')

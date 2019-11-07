@@ -59,6 +59,12 @@
                           </li>
                       @endif
                   @else
+                      <li class="nav-item avatar">
+                        <a class="nav-link p-0" href="#">
+                          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle z-depth-0"
+                            alt="avatar image" height="35">
+                        </a>
+                      </li>
                       <li class="nav-item dropdown">
                           <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{ Auth::user()->name }} <span class="caret"></span>

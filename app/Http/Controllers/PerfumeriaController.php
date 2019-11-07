@@ -28,14 +28,13 @@ class PerfumeriaController extends Controller
      */
     public function store(Request $request)
     {
-         
-        $perfume = Perfume::create( $request->all() );
 
-        if($request->hasFile('imgPerfume'))
-        {
+        $perfume = Perfume::create($request->all());
+
+        if ($request->hasFile('imgPerfume')) {
             $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
         }
-        
+
 
         $perfume->save();
 
@@ -53,7 +52,7 @@ class PerfumeriaController extends Controller
         //
     }
 
-   
+
     /**
      * Update the specified resource in storage.
      *
@@ -67,11 +66,10 @@ class PerfumeriaController extends Controller
 
         $perfume->update($request->all());
 
-        if($request->hasFile('imgPerfume'))
-        {
+        if ($request->hasFile('imgPerfume')) {
             $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
         }
-        
+
 
         $perfume->update();
 
@@ -87,10 +85,9 @@ class PerfumeriaController extends Controller
     public function destroy(Request $request)
     {
         $perfume = Perfume::findOrFail($request->category_id);
-     
+
         $perfume->delete();
-     
+
         return back();
     }
-
 }

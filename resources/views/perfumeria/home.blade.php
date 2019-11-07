@@ -4,12 +4,23 @@
 
 @section('iniciopagina')
 
-<div class="container">
+<div class="container mb-5">
 
  
-    <h2>
-      <example-component></example-component>
-    </h2>
+      <div class="intro h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h2>Bienvenido a PerfuVentas</h2>
+            <p>Bienvenido a PerfuVentas somos una tienda en linea para la venta
+            de perfumeria de las marcas que estan de moda pase adelante utilize
+            nuestar barra de busqueda si no encuentra su perfume favorito.</p>
+          </div>
+          <div class="col-md-6 mt-2 mb-4">
+            <img src="/images/perfumes1.png" class="img-fluid"/>
+          </div>
+        </div>
+      </div>
+
 
 
 </div>
@@ -35,7 +46,45 @@
 
         <!--Card image-->
         <div class="view overlay">
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top" alt="">
+          <img src="images/perfumes/212woman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/212sexyman.jpg" class="card-img-top" alt="">
           <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
             <div class="mask rgba-white-slight"></div>
           </a>
@@ -66,6 +115,238 @@
     <!--Grid column-->
 
 
+     <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/hugoman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/hugowoman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+    
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/212woman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/212sexyman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+
+
+     <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/hugoman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-3 col-md-6 mb-4">
+
+      <!--Card-->
+      <div class="card">
+
+        <!--Card image-->
+        <div class="view overlay">
+          <img src="images/perfumes/hugowoman.jpg" class="card-img-top" alt="">
+          <a data-toggle="modal" data-target="#basicExampleModal" class="dark-grey-text">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!--Card image-->
+
+        <!--Card content-->
+        <div class="card-body text-center">
+          <!--Category & Title-->
+          <h5>
+            <strong>
+              Denim shirt
+              <span class="badge badge-pill danger-color">NEW</span>
+            </strong>
+          </h5>
+
+          <h4 class="font-weight-bold blue-text">
+            <strong>120$</strong>
+          </h4>
+
+        </div>
+        <!--Card content-->
+
+      </div>
+      <!--Card-->
+
+    </div>
+    <!--Grid column-->
+    
+
+
 
   </div>
   <!--Grid row-->
@@ -93,7 +374,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 mb-4">
 
-                  <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/14.jpg" class="img-fluid" alt="">
+                  <img src="images/perfumes/212sexyman.jpg" class="img-fluid" alt="">
 
                 </div>
                 <!--Grid column-->
