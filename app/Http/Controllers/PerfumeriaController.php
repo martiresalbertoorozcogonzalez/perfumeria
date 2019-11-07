@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Perfume;
 
 class PerfumeriaController extends Controller
 {
@@ -13,18 +14,11 @@ class PerfumeriaController extends Controller
      */
     public function index()
     {
-        return view('admin.perfumeria.index');
+        $perfume = Perfume::all();
+
+        return view('admin.perfumeria.index', compact('perfume'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -34,7 +28,18 @@ class PerfumeriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $perfume = Perfume::create( $request->all() );
+
+        if($request->hasFile('imgPerfume'))
+        {
+            $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
+        }
+        
+
+        $perfume->save();
+
+        return back();
     }
 
     /**
@@ -48,17 +53,7 @@ class PerfumeriaController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
+   
     /**
      * Update the specified resource in storage.
      *
@@ -68,7 +63,19 @@ class PerfumeriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $perfume = Perfume::findOrFail($request->category_id);
+
+        $perfume->update($request->all());
+
+        if($request->hasFile('imgPerfume'))
+        {
+            $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
+        }
+        
+
+        $perfume->update();
+
+        return back();
     }
 
     /**
@@ -77,8 +84,13 @@ class PerfumeriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        $perfume = Perfume::findOrFail($request->category_id);
+     
+        $perfume->delete();
+     
+        return back();
     }
+
 }

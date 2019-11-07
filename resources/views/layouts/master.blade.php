@@ -17,22 +17,18 @@
  
 </head>
 
-<body>
-
-    <div class="container-fluid">
+<body id="app">
 
       <!--Navbar-->
       @include('perfumeria.partials.nav')
       <!--/.Navbar-->
 
-      <!--Section: Products v.3-->
-       @yield('content')
-      <!--Section: Products v.3-->
+      {{-- Seccion Anucnio inicio --}}
+      @yield('iniciopagina') 
 
-     
-    </div>
-  
-
+      <!--Section: Products v.3-->
+       @yield('listarproductos')
+      <!--Section: Products v.3-->
 
   <!-- SCRIPTS -->
   <!-- JQuery -->

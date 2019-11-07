@@ -1,16 +1,16 @@
 <?php
 
+//--------------Rutas de inicio de pagina------------//
 
-Route::get('/', function () {
-    return view('perfumeria.home');
-});
+Route::get('/', 'InicioController@inicio')->name('inicio');
+
+
+// -----------------Rutas Admin ------------------------- //
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('category','CategoryController');
+Route::resource('category', 'CategoryController');
 
-Route::resource('perfumeria','PerfumeriaController');
-
-
+Route::resource('perfume', 'PerfumeriaController');

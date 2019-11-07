@@ -45,7 +45,7 @@
                         </a>
                     </li>
                      <li>
-                        <a href="{{ url('perfumeria') }}">
+                        <a href="{{ url('perfume') }}">
                             <i class="material-icons">store</i>
                             <span>Perfumeria</span>
                         </a>
