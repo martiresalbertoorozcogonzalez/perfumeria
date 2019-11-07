@@ -4,7 +4,7 @@
 
 @section('iniciopagina')
 
-<div class="container mb-5">
+<div class="container" style="margin-top:80px;">
 
  
       <div class="intro h-100">
@@ -374,7 +374,7 @@
                 <!--Grid column-->
                 <div class="col-md-6 mb-4">
 
-                  <img src="images/perfumes/212sexyman.jpg" class="img-fluid" alt="">
+                  <img src="images/perfumes/212sexyman.jpg" width="300px" class="img-fluid" alt="">
 
                 </div>
                 <!--Grid column-->
