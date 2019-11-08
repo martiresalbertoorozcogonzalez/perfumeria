@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Perfume;
+use App\Category;
 
 class PerfumeriaController extends Controller
 {
@@ -14,9 +15,12 @@ class PerfumeriaController extends Controller
      */
     public function index()
     {
+
+        $cat = Category::all();
+
         $perfume = Perfume::all();
 
-        return view('admin.perfumeria.index', compact('perfume'));
+        return view('admin.perfumeria.index', compact('perfume', 'cat'));
     }
 
 
@@ -31,8 +35,8 @@ class PerfumeriaController extends Controller
 
         $perfume = Perfume::create($request->all());
 
-        if ($request->hasFile('imgPerfume')) {
-            $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
+        if ($request->hasFile('image')) {
+            $perfume->image = $request->file('image')->store('public');
         }
 
 
@@ -62,12 +66,12 @@ class PerfumeriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $perfume = Perfume::findOrFail($request->category_id);
+        $perfume = Perfume::findOrFail($request->perfume_id);
 
         $perfume->update($request->all());
 
-        if ($request->hasFile('imgPerfume')) {
-            $perfume->imgPerfume = $request->file('imgPerfume')->store('public');
+        if ($request->hasFile('image')) {
+            $perfume->image = $request->file('image')->store('public');
         }
 
 
@@ -84,7 +88,7 @@ class PerfumeriaController extends Controller
      */
     public function destroy(Request $request)
     {
-        $perfume = Perfume::findOrFail($request->category_id);
+        $perfume = Perfume::findOrFail($request->perfume_id);
 
         $perfume->delete();
 

@@ -23,6 +23,7 @@
     <tr>
         <th>Id</th>
         <th>Nombre</th>
+        <th>Categoria</th>
         <th>descripcion</th>
         <th>extracto</th>
         <th>precio</th>
@@ -36,17 +37,31 @@
     <tr>
         <th scope="row">1</th>
         <th>{{ $perf->name }}</th>
+        <th>{{ $perf->category->id}}</th>
         <th>{{ $perf->description }}</th>
         <th>{{ $perf->extract }}</th>
         <th>{{ $perf->price }}</th>
-        <td><img width="70px" src="{{ Storage::url($perf->imgPerfume) }}" alt=""/></td>
+        <td><img width="70px" src="{{ Storage::url($perf->image) }}" alt=""/></td>
         
         <th>
-        <button type="button" class="btn bg-blue waves-effect" data-toggle="modal" data-target="#edit">Editar</button>
+        <button type="button" class="btn bg-blue waves-effect" 
+                data-name="{{$perf->name}}" 
+                data-category={{$perf->category_id}} 
+                data-description="{{$perf->description}}" 
+                data-extract={{$perf->extract}} 
+                data-price={{$perf->price}}  
+                data-perfumeid={{$perf->id}} 
+                data-toggle="modal" 
+                data-target="#editPerfume">Editar
+        </button>
         </th>
         
         <th>
-          <button type="button" class="btn bg-red waves-effect">Eliminar</button>
+          <button type="button" class="btn bg-red waves-effect" 
+                  data-perfumeid={{$perf->id}} 
+                  data-toggle="modal" 
+                  data-target="#deleteperfume">Eliminar
+          </button>
         </th>
     
     </tr>
@@ -60,59 +75,9 @@
 </div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-        <h4 class="modal-title" id="myModalLabel">Nuevo perfume</h4>
-      </div>
-      <form action="{{route('perfume.store')}}" method="post" enctype="multipart/form-data">
-          {{csrf_field()}}
-        <div class="modal-body">
-
-          @include('admin.partials.formperfume')
-        
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Crear perfume</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Modal editar perfume-->
-
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        
-        <h4 class="modal-title" id="myModalLabel">Edit Perfume</h4>
-      </div>
-      <form action="{{route('perfume.update','test')}}" method="post">
-          {{method_field('patch')}}
-          {{csrf_field()}}
-        <div class="modal-body">
-            <input type="hidden" name="category_id" id="cat_id" value="">
-             @include('admin.partials.formperfume')
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-primary">Editar perfume</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
 
 <!-- Modal -->
-<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="deleteperfume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -126,12 +91,149 @@
         <p class="text-center">
           Are you sure you want to delete this?
         </p>
-            <input type="hidden" name="category_id" id="cat_id" value="">
+            <input type="hidden" name="perfume_id" id="perf_id" value="">
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success" data-dismiss="modal">No, Cancelar</button>
           <button type="submit" class="btn btn-warning">Si, Eliminar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Modal editar perfume-->
+<div class="modal fade" id="editPerfume" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+       <h4 class="modal-title" id="myModalLabel">Editar Perfume</h4>
+      
+      </div>
+    
+      <form action="{{route('perfume.update','test')}}" method="post" enctype="multipart/form-data">
+          {{method_field('patch')}}
+          {{csrf_field()}}
+    
+        <div class="modal-body">
+          <input type="hidden" name="perfume_id" id="perf_id" value="">
+          <div class="form-group">
+          <div class="form-line">
+            <label for="name">Name</label>
+              <input type="text" name="name" id="name" class="form-control">
+          </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-line">
+                <label for="description">Descripcion</label>
+                  <input type="text" name="description" id="description" class="form-control">
+              </div>
+          </div>	
+
+          <div class="form-group">
+            <div class="form-line">
+                <label for="extract">Extracto</label>
+                  <input type="text" name="extract" id="extract" class="form-control">
+              </div>
+          </div>	
+
+          <div class="form-group">
+            <div class="form-line">
+              <label for="price">price</label>
+                  <input type="text" name="price" id="price" class="form-control"> 
+            </div>
+          </div>	
+
+          <div class="form-group">
+          {{-- @foreach($categories as $cat) --}}
+            <div class="form-line">	
+            <label for="category_id">Categoria</label>
+              <input type="text" name="category_id" id="category_id" class="form-control" value="{{-- {{ $cat->id }} --}}"> 
+            </div>
+          {{-- @endforeach --}}
+          </div>	
+
+            <div class="form-group">
+              <label for="image">imgPerfume</label>
+                <input type="file" name="image" id="image"> 
+            </div>	
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Editar perfume</button>
+        </div>
+      </form>
+    
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        
+        <h4 class="modal-title" id="myModalLabel">Nuevo perfume</h4>
+      </div>
+      <form action="{{route('perfume.store')}}" method="post" enctype="multipart/form-data">
+          {{csrf_field()}}
+        <div class="modal-body">
+
+          <div class="form-group">
+           <div class="form-line">
+    	     <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control">
+           </div>
+          </div>
+
+        <div class="form-group">
+          <div class="form-line">
+              <label for="description">Descripcion</label>
+                <input type="text" name="description" id="description" class="form-control">
+            </div>
+        </div>	
+
+        <div class="form-group">
+          <div class="form-line">
+              <label for="extract">Extracto</label>
+                <input type="text" name="extract" id="extract" class="form-control">
+            </div>
+        </div>	
+
+        <div class="form-group">
+          <div class="form-line">
+            <label for="price">price</label>
+                <input type="text" name="price" id="price" class="form-control"> 
+          </div>
+        </div>	
+
+        <div class="form-group">
+        @foreach($cat as $cat)
+          <div class="form-line">	
+          <label for="category_id">Categoria</label>
+            <input type="text" name="category_id" id="category_id" class="form-control" value="{{ $cat->id }}"> 
+          </div>
+        @endforeach
+        </div>	
+
+
+        <div class="form-group">
+          <label for="image">imgPerfume</label>
+            <input type="file" name="image" id="image"> 
+        </div>	
+
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Crear perfume</button>
         </div>
       </form>
     </div>

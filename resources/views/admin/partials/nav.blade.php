@@ -23,54 +23,55 @@
     </div>
 </div>
 <!-- #User Info -->
+
 <!-- Menu -->
 <div class="menu">
-    <ul class="list">
+<ul class="list">
+    <li>
+        <a href="{{ url('/') }}">
+            <i class="material-icons">home</i>
+            <span>Pagina principal</span>
+        </a>
+    </li>
+    <li class="active">
+        <a href="{{ url('/home') }}">
+            <i class="material-icons">devices</i>
+            <span>Admin</span>
+        </a>
+    </li>
+    <li>
+        <a href="{{ url('category') }}">
+            <i class="material-icons">list</i>
+            <span>Categorias</span>
+        </a>
+    </li>
         <li>
-            <a href="{{ url('/') }}">
-                <i class="material-icons">home</i>
-                <span>Pagina principal</span>
-            </a>
-        </li>
-        <li class="active">
-            <a href="{{ url('/home') }}">
-                <i class="material-icons">dashboard</i>
-                <span>Admin</span>
-            </a>
-        </li>
-        <li>
-            <a href="{{ url('category') }}">
-                <i class="material-icons">list</i>
-                <span>Categorias</span>
-            </a>
-        </li>
-            <li>
-            <a href="{{ url('perfume') }}">
-                <i class="material-icons">store</i>
-                <span>Perfumeria</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                <i class="material-icons">exit_to_app</i>
-                <span>Salir</span>
-            </a>
+        <a href="{{ url('perfume') }}">
+            <i class="material-icons">store</i>
+            <span>Perfumeria</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            <i class="material-icons">exit_to_app</i>
+            <span>Salir</span>
+        </a>
 
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-                </form>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+            </form>
 
-            </li>   
-    </ul>
+        </li>   
+</ul>
 </div>
 <!-- #Menu -->
 <!-- Footer -->
 <div class="legal">
-    <div class="copyright">
-        &copy; 2019 <a href="javascript:void(0);">PerfuVentas</a>.
-    </div>
+<div class="copyright">
+    &copy; 2019 <a href="javascript:void(0);">PerfuVentas</a>.
+</div>
 </div>
 <!-- #Footer -->
 </aside>

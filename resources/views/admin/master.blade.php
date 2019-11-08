@@ -38,29 +38,60 @@
     <script src="{{ mix('/js/app.js') }}"></script>
     <script>
     
-    $('#edit').on('show.bs.modal', function (event) {
-    
-    var button = $(event.relatedTarget)
-    
-    var title = button.data('mytitle') 
-    var cat_id = button.data('catid') 
-    var modal = $(this)
+        $('#edit').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget)
+        
+        var title = button.data('mytitle') 
+        var cat_id = button.data('catid') 
+        var modal = $(this)
 
-    modal.find('.modal-body #title').val(title);
-    modal.find('.modal-body #cat_id').val(cat_id);
-    
-    })
+        modal.find('.modal-body #title').val(title);
+        modal.find('.modal-body #cat_id').val(cat_id);
+        
+        })
 
-    $('#delete').on('show.bs.modal', function (event) {
-      
-      var button = $(event.relatedTarget) 
-      
-      var cat_id = button.data('catid') 
-      var modal = $(this)
+        $('#delete').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        
+        var cat_id = button.data('catid') 
+        var modal = $(this)
 
-      modal.find('.modal-body #cat_id').val(cat_id);
-})  
+        modal.find('.modal-body #cat_id').val(cat_id);
+        })  
+        
+        $('#editPerfume').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget)
+        
+        var name = button.data('name') 
+        var description = button.data('description')
+        var extract = button.data('extract')
+        var price = button.data('price')
+        var category_id = button.data('category')
+        var perf_id = button.data('perfumeid')
+
+        var modal = $(this)
+
+        modal.find('.modal-body #name').val(name);
+        modal.find('.modal-body #description').val(description);
+        modal.find('.modal-body #extract').val(extract);
+        modal.find('.modal-body #price').val(price);
+        modal.find('.modal-body #category_id').val(category_id);
+        modal.find('.modal-body #perf_id').val(perf_id);
+        
+        })
     
+        $('#deleteperfume').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        
+        var perf_id = button.data('perfumeid') 
+        var modal = $(this)
+
+        modal.find('.modal-body #perf_id').val(perf_id);
+        }) 
     </script>
 
 </body>
