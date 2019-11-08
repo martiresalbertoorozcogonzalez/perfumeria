@@ -4,7 +4,7 @@
 
 @section('iniciopagina')
 
-<div class="container" style="margin-top:80px;">
+<div class="container mb-5"style="margin-top:80px;">
 
  
       <div class="intro h-100">
@@ -32,7 +32,7 @@
 
 @section('listarproductos')
 
-<div class="container">
+<div class="container mt-4">
 
 
   <!--Grid row-->
@@ -85,6 +85,32 @@
  
    @include('perfumeria.partials.form')
    
+</div>
+
+@endsection
+
+
+
+@section('anuncio1')
+
+<div class="container mb-5"style="margin-top:80px;">
+
+ 
+      <div class="intro h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h2>Acerca de Perfuventas</h2>
+            <p>Somos una tienda en linea para la venta de perfumeria con
+            mas de 12 anios de experiencia en atencion al cliente.</p>
+          </div>
+          <div class="col-md-6 mt-2 mb-4">
+            <img src="/images/pruevavector.jpg" width="375px" class="img-fluid"/>
+          </div>
+        </div>
+      </div>
+
+
+
 </div>
 
 @endsection

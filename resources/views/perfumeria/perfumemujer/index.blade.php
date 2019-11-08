@@ -1,7 +1,6 @@
 @extends('layouts.master')
 
 
-
 @section('iniciopagina')
 
 <div class="container" style="margin-top:80px;">
@@ -10,12 +9,12 @@
       <div class="intro h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-6">
-            <h2>Perfumes de Mujer</h2>
+            <h1>Perfumes de Mujer</h1>
             <p>Bienvenido a nuestra seccion de perfumes de mujer aqui podra
                encontrar todos los perfumes de mujer que tenemos a dispociosion.</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/perfumes1.png" class="img-fluid"/>
+            <img src="/images/perfumemujer3.png" class="img-fluid"/>
           </div>
         </div>
       </div>
@@ -25,7 +24,6 @@
 </div>
 
 @endsection
-
 
 {{-------------------Seccion lista de prodctos------------------ --}}
 
@@ -84,6 +82,34 @@
  
    @include('perfumeria.partials.form')
    
+</div>
+
+@endsection
+
+
+{{-- ---------------Seccion para mostrar un anuncio--------------- --}}
+
+@section('anuncio1')
+
+<div class="container" style="margin-top:80px;">
+
+ 
+      <div class="intro h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-md-6">
+            <h1>PerfuVentas tu mejor opcion</h1>
+            <p>Con los mejores perfumes de varias marcas en distintas
+            precentaciones y tamanios si no encuentras algun perfume
+            puedes utilizar la barra de busqueda.</p>
+          </div>
+          <div class="col-md-6 mt-2 mb-4">
+            <img src="/images/perfumemujer2.jpg" width="400px" class="img-fluid"/>
+          </div>
+        </div>
+      </div>
+
+
+
 </div>
 
 @endsection

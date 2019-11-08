@@ -9,7 +9,7 @@ class PerfumeMujerController extends Controller
 {
     public function index()
     {
-        $perfumes = Perfume::all();
+        $perfumes = Perfume::where("category_id", "=", 2)->get();
 
         return view('perfumeria.perfumemujer.index', compact('perfumes'));
     }

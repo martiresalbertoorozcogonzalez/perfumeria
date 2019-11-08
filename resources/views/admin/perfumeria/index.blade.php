@@ -216,12 +216,12 @@
         </div>	
 
         <div class="form-group">
-        @foreach($cat as $cat)
+        {{-- @foreach($cat as $cat) --}}
           <div class="form-line">	
           <label for="category_id">Categoria</label>
-            <input type="text" name="category_id" id="category_id" class="form-control" value="{{ $cat->id }}"> 
+            <input type="text" name="category_id" id="category_id" class="form-control" value=""> 
           </div>
-        @endforeach
+        {{-- @endforeach --}}
         </div>	
 
 

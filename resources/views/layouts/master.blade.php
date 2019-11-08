@@ -30,6 +30,7 @@
        @yield('listarproductos')
       <!--Section: Products v.3-->
 
+       @yield('anuncio1')
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
