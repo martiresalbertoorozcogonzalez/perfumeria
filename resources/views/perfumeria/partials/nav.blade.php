@@ -15,7 +15,7 @@
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home
+        <a class="nav-link" href="{{ url('/') }}">Home
           <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -25,8 +25,8 @@
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Perfumeria</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{{ url('perfumemujer') }}">Perfumes de Mujer</a>
           <a class="dropdown-item" href="#">Perfumes de Hombre</a>
-          <a class="dropdown-item" href="#">Perfumes de Mujer</a>
         </div>
       </li>
 

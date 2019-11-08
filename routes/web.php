@@ -1,9 +1,13 @@
 <?php
 
-//--------------Rutas de inicio de pagina------------//
+//--------------Rutas de inicio de pagina-----------------//
 
 Route::get('/', 'InicioController@inicio')->name('inicio');
 
+
+//--------------Controlador perfumes mujer----------------//
+
+ROute::get('perfumemujer', 'PerfumeMujerController@index')->name('perfumemujer');
 
 // -----------------Rutas Admin ------------------------- //
 
