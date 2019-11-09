@@ -16,7 +16,7 @@
             nuestar barra de busqueda si no encuentra su perfume favorito.</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/inicio4.jpg" class="img-fluid rounded"/>
+            <img src="/images/work.jpg" class="img-fluid rounded"/>
           </div>
         </div>
       </div>
@@ -105,7 +105,7 @@
             mejores marcas y tendencias .</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/woman.jpg" width="85%" class="img-fluid"/>
+            <img src="/images/inicio4.jpg" width="100%" class="img-fluid"/>
           </div>
         </div>
       </div>

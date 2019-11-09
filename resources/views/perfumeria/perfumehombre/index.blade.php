@@ -99,13 +99,13 @@
       <div class="intro h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-6">
-            <h1>PerfuVentas tu mejor opcion</h1>
+            <h2>PerfuVentas tu mejor opcion</h2>
             <p>Con los mejores perfumes de varias marcas en distintas
             precentaciones y tamanios si no encuentras algun perfume
             puedes utilizar la barra de busqueda.</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/svg/graphic.svg" class="img-fluid"/>
+            <img src="/images/inicio3.jpg" class="img-fluid"/>
           </div>
         </div>
       </div>
