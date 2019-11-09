@@ -26,15 +26,15 @@
           aria-haspopup="true" aria-expanded="false">Perfumeria</a>
         <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{{ url('perfumemujer') }}">Perfumes de Mujer</a>
-          <a class="dropdown-item" href="#">Perfumes de Hombre</a>
+          <a class="dropdown-item" href="{{ url('perfumehombre')}}">Perfumes de Hombre</a>
         </div>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Quienes somos</a>
+        <a class="nav-link" href="{{ url('acercade') }}">Quienes somos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contacto</a>
+        <a class="nav-link" href="{{ url('contacto') }}">Contacto</a>
       </li>
 
 

@@ -1,22 +1,22 @@
 @extends('layouts.master')
 
 
-
 @section('iniciopagina')
 
-<div class="container mb-5"style="margin-top:80px;">
+<div class="container" style="margin-top:80px;">
 
  
       <div class="intro h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-6">
-            <h2>Bienvenido a PerfuVentas</h2>
-            <p>Bienvenido a PerfuVentas somos una tienda en linea para la venta
-            de perfumeria de las marcas que estan de moda pase adelante utilize
-            nuestar barra de busqueda si no encuentra su perfume favorito.</p>
+            <h1>Perfumes de Hombre</h1>
+            <p>Bienvenido a nuestra seccion de perfumes de hombre aqui podra
+               encontrar todos los perfumes de mujer que tenemos a dispociosion
+               en varias marcas precentaciones y tamanos pase adelante si no ve
+               loe que quiere utilize buestra barra de busqueda.</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/inicio4.jpg" class="img-fluid rounded"/>
+            <img src="/images/perfumehombre1.png" class="img-fluid"/>
           </div>
         </div>
       </div>
@@ -27,12 +27,11 @@
 
 @endsection
 
-
 {{-------------------Seccion lista de prodctos------------------ --}}
 
 @section('listarproductos')
 
-<div class="container mt-4">
+<div class="container">
 
 
   <!--Grid row-->
@@ -90,22 +89,23 @@
 @endsection
 
 
+{{-- ---------------Seccion para mostrar un anuncio--------------- --}}
 
 @section('anuncio1')
 
-<div class="container mb-5"style="margin-top:80px;">
+<div class="container" style="margin-top:10px;">
 
  
       <div class="intro h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-6">
-            <h2>Acerca de Perfuventas</h2>
-            <p>Somos una tienda en linea para la venta de perfumeria con
-            mas de 12 anios de experiencia en atencion al cliente, con las
-            mejores marcas y tendencias .</p>
+            <h1>PerfuVentas tu mejor opcion</h1>
+            <p>Con los mejores perfumes de varias marcas en distintas
+            precentaciones y tamanios si no encuentras algun perfume
+            puedes utilizar la barra de busqueda.</p>
           </div>
           <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/woman.jpg" width="85%" class="img-fluid"/>
+            <img src="/images/svg/graphic.svg" class="img-fluid"/>
           </div>
         </div>
       </div>
