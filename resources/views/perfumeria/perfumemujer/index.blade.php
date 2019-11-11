@@ -79,11 +79,15 @@
 
   </div>
   <!--Grid row-->
- 
+    
    @include('perfumeria.partials.form')
-   
-</div>
 
+   {{ $perfumes->links() }}
+   
+    
+
+</div>
+ 
 @endsection
 
 
@@ -92,23 +96,20 @@
 @section('anuncio1')
 
 <div class="container" style="margin-top:20px;">
-
  
-      <div class="intro h-100">
-        <div class="row h-100 justify-content-center align-items-center">
-          <div class="col-md-6">
-            <h2>PerfuVentas tu mejor opcion</h2>
-            <p>Con los mejores perfumes de varias marcas en distintas
-            precentaciones y tamanios si no encuentras algun perfume
-            puedes utilizar la barra de busqueda.</p>
-          </div>
-          <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/mejorop.jpg" class="img-fluid"/>
-          </div>
-        </div>
-      </div>
-
-
+<div class="intro h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-md-6 mt-2 mb-4">
+      <img src="/images/mejorop.jpg" class="img-fluid"/>
+    </div>
+    <div class="col-md-6">
+      <h2>Somos tu mejor opcion</h2>
+      <p>Con los mejores perfumes de varias marcas en distintas
+      precentaciones y tamanios si no encuentras algun perfume
+      puedes utilizar la barra de busqueda ubicada en el menu.</p>
+    </div>       
+  </div>
+</div>
 
 </div>
 

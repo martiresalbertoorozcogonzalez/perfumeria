@@ -10,7 +10,7 @@ class PerfumeHombreController extends Controller
     public function index()
     {
 
-        $perfumes = Perfume::where("category_id", "=", 1)->get();
+        $perfumes = Perfume::where("category_id", "=", 1)->paginate(12);
 
         return view('perfumeria.perfumehombre.index', compact('perfumes'));
     }

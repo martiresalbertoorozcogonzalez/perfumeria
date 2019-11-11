@@ -10,7 +10,7 @@ class InicioController extends Controller
 {
     public function inicio()
     {
-        $perfumes = Perfume::paginate(16);
+        $perfumes = Perfume::orderBy('id', 'DESC')->paginate(12);
         return view('perfumeria.home', compact('perfumes'));
     }
 }

@@ -51,6 +51,20 @@
             <span>Perfumeria</span>
         </a>
     </li>
+    </li>
+        <li>
+        <a href="">
+            <i class="material-icons">book</i>
+            <span>Acerca</span>
+        </a>
+    </li>
+    </li>
+        <li>
+        <a href="">
+            <i class="material-icons">email</i>
+            <span>Mensajes</span>
+        </a>
+    </li>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}"
             onclick="event.preventDefault();

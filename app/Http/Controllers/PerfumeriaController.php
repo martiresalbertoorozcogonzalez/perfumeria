@@ -18,7 +18,9 @@ class PerfumeriaController extends Controller
 
         $cat = Category::all();
 
-        $perfume = Perfume::all();
+        $perfume = Perfume::orderBy('id', 'DESC')->paginate(4);
+
+
 
         return view('admin.perfumeria.index', compact('perfume', 'cat'));
     }
