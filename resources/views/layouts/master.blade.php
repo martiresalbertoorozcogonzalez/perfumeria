@@ -14,6 +14,15 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.min.css" rel="stylesheet">
+
+  <style>
+  
+  .error{
+      color:red;
+      font-size:16px;
+  }
+
+  </style>
  
 </head>
 
@@ -31,6 +40,7 @@
       <!--Section: Products v.3-->
 
        @yield('anuncio1')
+
   <!-- SCRIPTS -->
   <!-- JQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

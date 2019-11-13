@@ -20,8 +20,10 @@ Route::get('acercade', 'AcercadeController@index')->name('acercade');
 
 
 //---------------------Controlador Contacto ---------------//
-
 Route::get('contacto', 'ContactoController@index')->name('contacto');
+
+Route::post('contact', 'ContactoController@message')->name('contact');
+
 
 
 // -----------------Rutas Admin ------------------------- //

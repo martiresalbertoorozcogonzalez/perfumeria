@@ -20,6 +20,7 @@
   </div>
 </div>
 
+
 <!--Section: Contact v.2-->
 <section class="mb-4">
 
@@ -27,16 +28,23 @@
 
         <!--Grid column-->
 <div class="col-md-9 mb-md-0 mb-5">
-  <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
+@if (session()->has('info'))
+    
+    <h3>{{ session('info')}}</h3>
+    
+@else    
+  <form method="POST" action="{{ route('contact') }}">
+        @csrf
       <!--Grid row-->
       <div class="row">
 
           <!--Grid column-->
           <div class="col-md-6">
               <div class="md-form mb-0">
-                  <input type="text" id="name" name="name" class="form-control">
-                  <label for="name" class="">Your name</label>
+                  <input type="text" name="nombre" class="form-control" value="{{ old('nombre')}}">
+                  <label for="nombre" class="">Your name</label>
+                  {!! $errors->first('nombre', '<span class=error>:message</span>') !!}
               </div>
           </div>
           <!--Grid column-->
@@ -44,8 +52,9 @@
           <!--Grid column-->
           <div class="col-md-6">
               <div class="md-form mb-0">
-                  <input type="text" id="email" name="email" class="form-control">
+                  <input type="text" name="email" class="form-control" value="{{ old('email') }}">
                   <label for="email" class="">Your email</label>
+                   {!! $errors->first('email', '<span class=error>:message</span>') !!}
               </div>
           </div>
           <!--Grid column-->
@@ -57,8 +66,9 @@
       <div class="row">
           <div class="col-md-12">
               <div class="md-form mb-0">
-                  <input type="text" id="subject" name="subject" class="form-control">
+                  <input type="text" name="subjet" class="form-control">
                   <label for="subject" class="">Subject</label>
+                  {!! $errors->first('subjet', '<span class=error>:message</span>') !!}
               </div>
           </div>
       </div>
@@ -71,20 +81,27 @@
           <div class="col-md-12">
 
               <div class="md-form">
-                  <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                  <label for="message">Your message</label>
+                  <textarea type="text" name="mensaje" rows="2" class="form-control md-textarea">{{ old('mensaje') }}</textarea>
+                  <label for="mensaje">Your message</label>
+                   {!! $errors->first('mensaje', '<span class=error>:message</span>') !!}
               </div>
 
           </div>
       </div>
       <!--Grid row-->
 
-  </form>
 
   <div class="text-center text-md-left">
-      <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+ 
+     <input type="submit" value=" Enviar">
+
   </div>
-  <div class="status"></div>
+
+  </form>
+
+@endif
+
+
 </div>
 <!--Grid column-->
 
@@ -109,9 +126,6 @@
 </div>
 
 </section>
-<!--Section: Contact v.2-->
-
-
 
 </div>
 
