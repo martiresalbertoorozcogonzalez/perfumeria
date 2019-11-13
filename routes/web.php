@@ -1,5 +1,14 @@
 <?php
 
+
+// App\User::create([
+//     'name' => 'Carlos',
+//     'email' => 'carlos@gmail.com',
+//     'password' => bcrypt('123456'),
+// ]);
+
+
+
 //--------------Rutas de inicio de pagina-----------------//
 
 Route::get('/', 'InicioController@inicio')->name('inicio');

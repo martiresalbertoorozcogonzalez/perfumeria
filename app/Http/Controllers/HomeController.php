@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //Awui se cambia el tipo de usuario que puerde pasar al admin
+        $this->middleware(['auth', 'roles:admin']);
     }
 
     /**
