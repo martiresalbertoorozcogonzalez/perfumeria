@@ -92,6 +92,21 @@
 
         modal.find('.modal-body #perf_id').val(perf_id);
         }) 
+
+
+
+
+        $('#deletemessage').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        
+        var mess_id = button.data('messid') 
+        var modal = $(this)
+
+        modal.find('.modal-body #mess_id').val(mess_id);
+        }) 
+
+
     </script>
 
 </body>

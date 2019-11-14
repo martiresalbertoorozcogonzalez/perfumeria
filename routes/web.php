@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Input;
-
 
 // App\User::create([
 //     'name' => 'Carlos',
@@ -10,26 +8,23 @@ use Illuminate\Support\Facades\Input;
 // ]);
 
 
-
 //--------------Rutas de inicio de pagina-----------------//
-
-
 Route::get('/', 'InicioController@inicio')->name('inicio');
 
 
 //-----------Ruta para el buscador de productos-----------//
 Route::get('/search', 'InicioController@search');
-//--------------Controlador perfumes mujer----------------//
 
+
+//--------------Controlador perfumes mujer----------------//
 Route::get('perfumemujer', 'PerfumeMujerController@index')->name('perfumemujer');
 
-//--------------Controlador perfumes hombre---------------//
 
+//--------------Controlador perfumes hombre---------------//
 Route::get('perfumehombre', 'PerfumeHombreController@index')->name('perfumehombre');
 
 
 //---------------------Controlador Acercade ---------------//
-
 Route::get('acercade', 'AcercadeController@index')->name('acercade');
 
 
@@ -41,7 +36,6 @@ Route::post('contact', 'ContactoController@message')->name('contact');
 
 
 // -----------------Rutas Admin ------------------------- //
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -49,3 +43,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('category', 'CategoryController');
 
 Route::resource('perfume', 'PerfumeriaController');
+
+Route::resource('mensajes', 'MensajesController');
