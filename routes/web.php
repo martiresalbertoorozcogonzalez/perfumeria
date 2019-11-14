@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Input;
+
 
 // App\User::create([
 //     'name' => 'Carlos',
@@ -11,9 +13,12 @@
 
 //--------------Rutas de inicio de pagina-----------------//
 
+
 Route::get('/', 'InicioController@inicio')->name('inicio');
 
 
+//-----------Ruta para el buscador de productos-----------//
+Route::get('/search', 'InicioController@search');
 //--------------Controlador perfumes mujer----------------//
 
 Route::get('perfumemujer', 'PerfumeMujerController@index')->name('perfumemujer');

@@ -38,13 +38,17 @@
     </li>
 
 
-  <form class="form-inline">
+   {{-- seccion de barra de busqueda --}}
+  <form class="form-inline" action="/search" method="GET">
+    {{ csrf_field()}}
     <div class="md-form my-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Que perfume buscas?" aria-label="Search">
+      <input class="form-control mr-sm-2" name="search" type="text" placeholder="Que perfume buscas?" aria-label="Search">
     </div>
   </form>
     
-  </ul>
+
+
+</ul>
   <!-- Links -->
     <!-- Right Side Of Navbar -->
   <ul class="navbar-nav ml-auto">
