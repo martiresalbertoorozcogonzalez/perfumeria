@@ -53,14 +53,14 @@
     </li>
     </li>
         <li>
-        <a href="">
+        <a href="{{ url('acerca') }}">
             <i class="material-icons">book</i>
             <span>Acerca</span>
         </a>
     </li>
     </li>
         <li>
-        <a href="">
+        <a href="{{ url('mensajes') }}">
             <i class="material-icons">email</i>
             <span>Mensajes</span>
         </a>

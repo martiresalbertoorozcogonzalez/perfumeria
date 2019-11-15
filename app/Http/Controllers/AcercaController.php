@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Perfume;
-use App\Category;
+use App\Acerca;
 
-class PerfumeriaController extends Controller
+class AcercaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,14 +14,8 @@ class PerfumeriaController extends Controller
      */
     public function index()
     {
-
-        $cat = Category::all();
-
-        $perfume = Perfume::orderBy('id', 'DESC')->paginate(4);
-
-
-
-        return view('admin.perfumeria.index', compact('perfume', 'cat'));
+        $acerca = Acerca::all();
+        return view('admin.acerca.index', compact('acerca'));
     }
 
 
@@ -35,14 +28,15 @@ class PerfumeriaController extends Controller
     public function store(Request $request)
     {
 
-        $perfume = Perfume::create($request->all());
+
+        $acerca = Acerca::create($request->all());
 
         if ($request->hasFile('image')) {
-            $perfume->image = $request->file('image')->store('public');
+            $acerca->image = $request->file('image')->store('public');
         }
 
 
-        $perfume->save();
+        $acerca->save();
 
         return back();
     }
@@ -57,16 +51,17 @@ class PerfumeriaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $perfume = Perfume::findOrFail($request->perfume_id);
 
-        $perfume->update($request->all());
+        $acerca = Acerca::findOrFail($request->acerca_id);
+
+        $acerca->update($request->all());
 
         if ($request->hasFile('image')) {
-            $perfume->image = $request->file('image')->store('public');
+            $acerca->image = $request->file('image')->store('public');
         }
 
 
-        $perfume->update();
+        $acerca->update();
 
         return back();
     }
@@ -77,11 +72,11 @@ class PerfumeriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Request $request, $id)
     {
-        $perfume = Perfume::findOrFail($request->perfume_id);
+        $acerca = Acerca::findOrFail($request->acerca_id);
 
-        $perfume->delete();
+        $acerca->delete();
 
         return back();
     }

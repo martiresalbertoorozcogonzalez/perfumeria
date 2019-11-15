@@ -43,7 +43,7 @@
         </a>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-        <a href="#">
+    <a href="{{ url('acerca') }}">
         <div class="info-box hover-zoom-effect">
             <div class="icon bg-cyan">
                 <i class="material-icons">book</i>

@@ -35,11 +35,16 @@
 
 {{-------------------Seccion lista de prodctos------------------ --}}
 
+
+
 @section('listarproductos')
 
+
 <div class="container mt-4">
-
-
+  
+  <div class="row mb-3 ml-1">
+    <h2>Lo mas nuevo</h2>
+  </div>
   <!--Grid row-->
   <div class="row wow fadeIn">
    

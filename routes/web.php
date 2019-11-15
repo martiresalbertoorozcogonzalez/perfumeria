@@ -45,3 +45,5 @@ Route::resource('category', 'CategoryController');
 Route::resource('perfume', 'PerfumeriaController');
 
 Route::resource('mensajes', 'MensajesController');
+
+Route::resource('acerca', 'AcercaController');

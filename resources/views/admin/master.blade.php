@@ -107,6 +107,32 @@
         }) 
 
 
+        $('#editAcerca').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget)
+        
+        var title = button.data('title') 
+        var description = button.data('description')
+        var acer_id = button.data('acerid')
+
+        var modal = $(this)
+
+        modal.find('.modal-body #title').val(title);
+        modal.find('.modal-body #description').val(description);
+        modal.find('.modal-body #acer_id').val(acer_id);
+        
+        })
+
+        $('#deleteacerca').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        
+        var acer_id = button.data('acerid') 
+        var modal = $(this)
+
+        modal.find('.modal-body #acer_id').val(acer_id);
+        }) 
+
     </script>
 
 </body>
