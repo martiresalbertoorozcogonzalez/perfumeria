@@ -45,13 +45,10 @@
                 </div>
 
                 <p class="lead">
-                    <span class="mr-1">
-                    <del>Q{{$perf->price}}</del>
-                    </span>
-                    <span>$100</span>
+                    <span>Q{{$perf->price}}</span>
                 </p>
 
-                <p class="lead font-weight-bold">Description</p>
+                <p class="lead font-weight-bold">Descripcion perfume</p>
 
                 <p>{{$perf->description}}</p>
 
