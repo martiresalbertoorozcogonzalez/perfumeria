@@ -6,7 +6,7 @@
 <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Perfume de Caballero</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Perfumeria</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
@@ -41,8 +41,12 @@
                     <a>
                     <span class="badge blue mr-1">New</span>
                     </a>
-
+                    <a>
+                    <span class="badge blue mr-1">{{$perf->category->title}}</span>
+                    </a>
                 </div>
+                    
+                <p class="lead font-weight-bold">{{$perf->name}}</p>
 
                 <p class="lead">
                     <span>Q{{$perf->price}}</span>

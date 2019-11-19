@@ -18,7 +18,7 @@ class PerfumeriaController extends Controller
 
         $cat = Category::all();
 
-        $perfume = Perfume::orderBy('id', 'DESC')->paginate(4);
+        $perfumehombre = Perfume::orderBy('id', 'DESC')->paginate(4);
 
 
 
