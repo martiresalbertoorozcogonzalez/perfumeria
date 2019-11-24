@@ -1,13 +1,11 @@
 @extends('layouts.master')
 
+@section('content')
 
-
-@section('iniciopagina')
-
-<div class="container mb-5"style="margin-top:80px;">
-
+<div class="container" style="margin-top:85px;">
  
-      <div class="intro h-100">
+  
+    <div class="intro h-100">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-md-6">
             <h2>Bienvenido</h2>
@@ -28,105 +26,76 @@
 
 
 
-</div>
+<hr>
 
-@endsection
+<!--Section: Content-->
+<section class="text-center mb-5 mt-5">
 
-
-{{-------------------Seccion lista de prodctos------------------ --}}
-
-
-
-@section('listarproductos')
-
-
-<div class="container mt-4">
-  
-  <div class="row mb-3 ml-1">
-    <h2>Lo mas nuevo</h2>
-  </div>
   <!--Grid row-->
-  <div class="row wow fadeIn">
-   
-   @foreach ($perfumes as $perf )
-       
+  <div class="row">
+
+    @foreach ($perfumes as $perf)
+        
     <!--Grid column-->
-    <div class="col-lg-3 col-md-6 mb-4">
+    <div class="col-lg-4 col-md-12 mb-4">
 
-      <!--Card-->
-      <div class="card">
+      <a class="waves-effect waves-light"><img
+          src="{{ Storage::url($perf->image) }}" class="img-fluid"
+          alt=""></a>
 
-        <!--Card image-->
-        <div class="view overlay">
-          <img src="{{ Storage::url($perf->image) }}" class="card-img-top" alt="">
-          <a data-toggle="modal" data-target="#listarperfume{{$perf->id}}" class="dark-grey-text">
-            <div class="mask rgba-white-slight"></div>
-          </a>
-        </div>
-        <!--Card image-->
+      <p class="mb-1"><a class="font-weight-bold black-text">{{$perf->name}}</a></p>
 
-        <!--Card content-->
-        <div class="card-body text-center">
-          <!--Category & Title-->
-          <h5>
-            <strong>
-              {{$perf->name}}
-              <span class="badge badge-pill danger-color">NEW</span>
-            </strong>
-          </h5>
+      <p class="mb-1"><strong>Q {{$perf->price}}</strong></p>
 
-          <h4 class="font-weight-bold blue-text">
-            <strong>Q{{$perf->price}}</strong>
-          </h4>
-
-        </div>
-        <!--Card content-->
-
+      <div class="amber-text fa-xs mb-1">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
       </div>
-      <!--Card-->
-      
 
+      <a href="{{url('contacto')}}" class="btn btn-indigo btn-rounded btn-sm px-3">Contactanos</a>
+      <button type="button" data-toggle="modal" data-target="#listarperfume{{$perf->id}}" class="btn btn-outline-indigo btn-rounded btn-sm px-3 waves-effect">Detalles</button>
 
     </div>
     <!--Grid column-->
 
-   @endforeach
-     
+    @endforeach
 
   </div>
   <!--Grid row-->
-    
-   @include('perfumeria.partials.form')
+
+  @include('perfumeria.partials.form')
    
-      {{ $perfumes->links() }}
+  {{ $perfumes->links() }}
 
-</div>
+</section>
+<!--Section: Content-->
 
-@endsection
+<hr>
 
 
-
-@section('anuncio1')
-
-<div class="container mb-5"style="margin-top:40px;">
+<div class="container mb-5 mt-5">
 
  
-      <div class="intro h-100">
-        <div class="row h-100 justify-content-center align-items-center">
-          <div class="col-md-6">
-            <h2>Acerca de Perfuventas</h2>
-            <p>Somos una tienda en linea para la venta de perfumeria con
-            mas de 12 anios de experiencia en atencion al cliente, con las
-            mejores marcas y tendencias .</p>
-          </div>
-          <div class="col-md-6 mt-2 mb-4">
-            <img src="/images/work.jpg" width="100%" class="img-fluid"/>
-          </div>
+    <div class="intro h-100">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-6">
+          <h2>Acerca de Perfuventas</h2>
+          <p>Somos una tienda en linea para la venta de perfumeria con
+          mas de 12 anios de experiencia en atencion al cliente, con las
+          mejores marcas y tendencias .</p>
+        </div>
+        <div class="col-md-6 mt-2 mb-4">
+          <img src="/images/work.jpg" width="100%" class="img-fluid"/>
         </div>
       </div>
+    </div>
 
 
 
 </div>
+
 
 @endsection

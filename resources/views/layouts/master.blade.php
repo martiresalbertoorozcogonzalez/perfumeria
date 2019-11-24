@@ -33,13 +33,7 @@
       <!--/.Navbar-->
 
       {{-- Seccion Anucnio inicio --}}
-      @yield('iniciopagina') 
-
-      <!--Section: Products v.3-->
-       @yield('listarproductos')
-      <!--Section: Products v.3-->
-
-       @yield('anuncio1')
+      @yield('content') 
 
   <!-- SCRIPTS -->
   <!-- JQuery -->

@@ -3,7 +3,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="listarperfume{{$perf->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
+<div class="modal-dialog" role="document">
     <div class="modal-content">
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Perfumeria</h5>
@@ -39,9 +39,6 @@
                     <span class="badge purple mr-1"></span>
                     </a>
                     <a>
-                    <span class="badge blue mr-1">New</span>
-                    </a>
-                    <a>
                     <span class="badge blue mr-1">{{$perf->category->title}}</span>
                     </a>
                 </div>
@@ -52,7 +49,7 @@
                     <span>Q{{$perf->price}}</span>
                 </p>
 
-                <p class="lead font-weight-bold">Descripcion perfume</p>
+                <p class="lead font-weight-bold">Descripcion</p>
 
                 <p>{{$perf->description}}</p>
 

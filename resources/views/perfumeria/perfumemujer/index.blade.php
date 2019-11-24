@@ -3,7 +3,7 @@
 @extends('layouts.master')
 
 
-@section('iniciopagina')
+@section('content')
 
 <div class="container" style="margin-top:80px;">
 
@@ -22,83 +22,60 @@
       </div>
 
 
-
-</div>
-
-@endsection
-
-{{-------------------Seccion lista de prodctos------------------ --}}
-
-@section('listarproductos')
-
-<div class="container">
+<hr>
 
 
-  <!--Grid row-->
-  <div class="row wow fadeIn">
-   
-   @foreach ($perfumes as $perf )
-       
-    <!--Grid column-->
-    <div class="col-lg-3 col-md-6 mb-4">
+<!--Section: Content-->
+<section class="text-center">
 
-      <!--Card-->
-      <div class="card">
-
-        <!--Card image-->
-        <div class="view overlay">
-          <img src="{{ Storage::url($perf->image) }}" class="card-img-top" alt="">
-          <a data-toggle="modal" data-target="#listarperfume{{$perf->id}}" class="dark-grey-text">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+    <!--Grid row-->
+    <div class="row">
+  
+      @foreach ($perfumes as $perf)
+          
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4">
+  
+        <a class="waves-effect waves-light"><img
+            src="{{ Storage::url($perf->image) }}" class="img-fluid"
+            alt=""></a>
+  
+        <p class="mb-1"><a class="font-weight-bold black-text">{{$perf->name}}</a></p>
+  
+        <p class="mb-1"><strong>Q {{$perf->price}}</strong></p>
+  
+        <div class="amber-text fa-xs mb-1">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
         </div>
-        <!--Card image-->
-
-        <!--Card content-->
-        <div class="card-body text-center">
-          <!--Category & Title-->
-          <h5>
-            <strong>
-              {{$perf->name}}
-              <span class="badge badge-pill danger-color">NEW</span>
-            </strong>
-          </h5>
-
-          <h4 class="font-weight-bold blue-text">
-            <strong>Q{{$perf->price}}</strong>
-          </h4>
-
-        </div>
-        <!--Card content-->
-
+  
+        <a href="{{url('contacto')}}" class="btn btn-indigo btn-rounded btn-sm px-3">Contactanos</a>
+        <button type="button" data-toggle="modal" data-target="#listarperfume{{$perf->id}}" class="btn btn-outline-indigo btn-rounded btn-sm px-3 waves-effect">Detalles</button>
+  
       </div>
-      <!--Card-->
-
+      <!--Grid column-->
+  
+      @endforeach
+  
     </div>
-    <!--Grid column-->
+    <!--Grid row-->
+  
+    @include('perfumeria.partials.form')
+     
+    {{ $perfumes->links() }}
+  
+  </section>
+  <!--Section: Content-->
+  
 
-   @endforeach
+<hr>
 
-  </div>
-  <!--Grid row-->
-    
-   @include('perfumeria.partials.form')
-
-   {{ $perfumes->links() }}
-   
-    
-
-</div>
- 
-@endsection
-
-
-{{-- ---------------Seccion para mostrar un anuncio--------------- --}}
-
-@section('anuncio1')
 
 <div class="container" style="margin-top:20px;">
- 
+
 <div class="intro h-100">
   <div class="row h-100 justify-content-center align-items-center">
     <div class="col-md-6 mt-2 mb-4">
@@ -114,5 +91,8 @@
 </div>
 
 </div>
+    
+</div>
 
 @endsection
+
