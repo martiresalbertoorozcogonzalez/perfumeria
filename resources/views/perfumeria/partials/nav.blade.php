@@ -31,7 +31,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="{{ url('acercade') }}">Quienes somos</a>
+      <a class="nav-link" href="{{ url('acercade') }}">Quien somos</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="{{ url('contacto') }}">Contacto</a>

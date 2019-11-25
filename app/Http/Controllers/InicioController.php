@@ -20,8 +20,12 @@ class InicioController extends Controller
         $search = $request->get('search');
         $perfumes = Perfume::where('name', 'like', '%' . $search . '%')->paginate(6);
 
-        // dd($perfumes);
 
-        return view('perfumeria.showproduct', compact('perfumes'));
+        if (count($perfumes) == 0) {
+            return view('perfumeria.dontsearch')
+                ->with('info', 'No hemos encontrado resultados de esta busqueda:');
+        } else {
+            return view('perfumeria.showproduct', compact('perfumes'));
+        }
     }
 }
