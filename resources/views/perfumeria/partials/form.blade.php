@@ -73,7 +73,7 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Regresar</button>
-        <button type="button" class="btn btn-primary">Hablanos</button>
+        <button type="button" class="btn btn-primary">Enviar mensaje</button>
     </div>
     </div>
 </div>

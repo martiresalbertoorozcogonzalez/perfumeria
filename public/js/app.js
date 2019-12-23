@@ -73211,8 +73211,6 @@ try {
 
   window.Raphael = __webpack_require__(/*! adminbsb-materialdesign/plugins/raphael/raphael */ "./node_modules/adminbsb-materialdesign/plugins/raphael/raphael.js");
 
-  __webpack_require__(/*! adminbsb-materialdesign/plugins/morrisjs/morris */ "./node_modules/adminbsb-materialdesign/plugins/morrisjs/morris.js");
-
   __webpack_require__(/*! adminbsb-materialdesign/plugins/chartjs/Chart.bundle */ "./node_modules/adminbsb-materialdesign/plugins/chartjs/Chart.bundle.js");
 
   __webpack_require__(/*! adminbsb-materialdesign/plugins/flot-charts/jquery.flot */ "./node_modules/adminbsb-materialdesign/plugins/flot-charts/jquery.flot.js");
@@ -73226,6 +73224,8 @@ try {
   __webpack_require__(/*! adminbsb-materialdesign/plugins/flot-charts/jquery.flot.time */ "./node_modules/adminbsb-materialdesign/plugins/flot-charts/jquery.flot.time.js");
 
   __webpack_require__(/*! adminbsb-materialdesign/plugins/jquery-sparkline/jquery.sparkline */ "./node_modules/adminbsb-materialdesign/plugins/jquery-sparkline/jquery.sparkline.js");
+
+  __webpack_require__(/*! adminbsb-materialdesign/plugins/morrisjs/morris */ "./node_modules/adminbsb-materialdesign/plugins/morrisjs/morris.js");
 
   __webpack_require__(/*! adminbsb-materialdesign/js/admin */ "./node_modules/adminbsb-materialdesign/js/admin.js");
 
@@ -73241,7 +73241,7 @@ try {
 
 
 window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -73251,9 +73251,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+  console.error("CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token");
 }
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

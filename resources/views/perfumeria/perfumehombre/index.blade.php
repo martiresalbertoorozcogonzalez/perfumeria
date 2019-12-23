@@ -8,7 +8,7 @@
 <div class="intro h-100">
   <div class="row h-100 justify-content-center align-items-center">
     <div class="col-md-6">
-      <h2>Perfumes de hombre</h2>
+      <h1>Perfumes de hombre</h1>
       <p>Bienvenido a nuestra seccion de perfumes de hombre aqui podra
           encontrar todas las fragancias que tenemos disponibles para hombre
           en varias marcas precentaciones y tamanos pase adelante si no ve 

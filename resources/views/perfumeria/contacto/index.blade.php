@@ -43,7 +43,7 @@
           <div class="col-md-6">
               <div class="md-form mb-0">
                   <input type="text" name="nombre" class="form-control" value="{{ old('nombre')}}">
-                  <label for="nombre" class="">Your name</label>
+                  <label for="nombre" class="">Nombre</label>
                   {!! $errors->first('nombre', '<span class=error>:message</span>') !!}
               </div>
           </div>
@@ -53,7 +53,7 @@
           <div class="col-md-6">
               <div class="md-form mb-0">
                   <input type="text" name="email" class="form-control" value="{{ old('email') }}">
-                  <label for="email" class="">Your email</label>
+                  <label for="email" class="">Email</label>
                    {!! $errors->first('email', '<span class=error>:message</span>') !!}
               </div>
           </div>
@@ -67,7 +67,7 @@
           <div class="col-md-12">
               <div class="md-form mb-0">
                   <input type="text" name="subjet" class="form-control">
-                  <label for="subject" class="">Subject</label>
+                  <label for="subject" class="">Asunto</label>
                   {!! $errors->first('subjet', '<span class=error>:message</span>') !!}
               </div>
           </div>
@@ -82,7 +82,7 @@
 
               <div class="md-form">
                   <textarea type="text" name="mensaje" rows="2" class="form-control md-textarea">{{ old('mensaje') }}</textarea>
-                  <label for="mensaje">Your message</label>
+                  <label for="mensaje">Mensaje</label>
                    {!! $errors->first('mensaje', '<span class=error>:message</span>') !!}
               </div>
 
