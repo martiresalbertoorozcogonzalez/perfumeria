@@ -34,7 +34,6 @@ Route::get('contacto', 'ContactoController@index')->name('contacto');
 Route::post('contact', 'ContactoController@message')->name('contact');
 
 
-
 //-------------------Ruta descubre mas perfumes ----------//
 Route::get('descubreperfumes', 'DescubreController@index')->name('descubreperfumes');
 
