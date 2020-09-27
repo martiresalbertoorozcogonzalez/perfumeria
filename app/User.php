@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','role_id'
     ];
 
     /**
@@ -46,6 +46,7 @@ class User extends Authenticatable
     {
 
         foreach ($roles as $role) {
+
             if ($this->role->name === $role) {
                 return true;
             }
@@ -53,4 +54,5 @@ class User extends Authenticatable
 
         return false;
     }
+
 }

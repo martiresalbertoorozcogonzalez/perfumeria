@@ -20,7 +20,9 @@ class CreatePerfumesTable extends Migration
             $table->text('extract');
             $table->decimal('price', 5, 2);
             $table->string('imgPerfume');
-            $table->integer('category_id')->unsigned();
+            
+            $table->bigInteger('category_id')->unsigned();
+            
             $table->foreign('category_id')
                   ->references('id')
                   ->on('categories')

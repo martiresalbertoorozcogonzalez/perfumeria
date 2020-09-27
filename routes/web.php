@@ -2,8 +2,8 @@
 
 
 // App\User::create([
-//     'name' => 'Carlos',
-//     'email' => 'carlos@gmail.com',
+//     'name' => 'Beto',
+//     'email' => 'beto@gmail.com',
 //     'password' => bcrypt('123456'),
 // ]);
 
@@ -50,3 +50,49 @@ Route::resource('perfume', 'PerfumeriaController');
 Route::resource('mensajes', 'MensajesController');
 
 Route::resource('acerca', 'AcercaController');
+
+
+
+
+
+// App\Category::create([
+//     'title' => 'Cabezales',
+//     'user_id' => 1,
+// ]);
+
+// App\Category::create([
+//     'title' => 'Furgones',
+//     'user_id' => 1,
+// ]);
+
+// App\Condicion::create([
+//     'titulo' => 'Usado',
+//     'user_id' => 1,
+// ]);
+
+// App\Role::create([
+//     'name' => 'admin',
+//     'display_name' => 'admin',
+//     'description' => 'admin',
+// ]);
+
+// App\Role::create([
+//     'name' => 'visitante',
+//     'display_name' => 'visitante',
+//     'description' => 'visitante',
+// ]);
+
+
+// App\User::create([
+//     'name' => 'Beto',
+//     'email' => 'beto@gmail.com',
+//     'password' => bcrypt('123456'),
+//     'role_id' => 1,
+// ]);
+
+// App\User::create([
+//     'name' => 'Irene Alburez',
+//     'email' => 'irene@gmail.com',
+//     'password' => bcrypt('123456'),
+//     'role_id' => 2,
+// ]);

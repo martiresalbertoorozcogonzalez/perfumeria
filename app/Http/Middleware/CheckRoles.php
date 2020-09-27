@@ -16,13 +16,14 @@ class CheckRoles
     public function handle($request, Closure $next)
     {
 
-        $roles = array_slice(func_get_args(), 2);
-
-        if (auth()->user()->hasRoles($roles)) {
-            return $next($request);
-        }
-
-
-        return redirect('/');
+        $roles = array_slice( func_get_args(), 2 );
+       
+        if(auth()->user()->hasRoles($roles) )
+          {
+             return $next($request);
+          }
+      
+     return redirect('/');
+     
     }
 }
